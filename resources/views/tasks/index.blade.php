@@ -3,7 +3,7 @@
 @section('content')
 <div class="row ">
     <div class="col-xs-1 col-md-4">
-        <form method="post" action="/task/create">
+        <form method="post" action="{{route('task.add')}}">
             <input type="text" class="form-control" id="title" name="title" placeholder="Insert task name">
             @if($errors->has('title'))
                 <div class="text-red">*{{ $errors->first('title') }}</div>
